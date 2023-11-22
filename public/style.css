@@ -1,0 +1,50 @@
+/* public/style.css */
+
+body {
+  padding: 0;
+  margin: 0;
+  background: linear-gradient(to left bottom, #C33764, #1D2671);
+}
+
+.grid {
+  display: grid;
+  justify-content: center;
+  align-content: center;
+  min-height: 100vh;
+  grid-template-columns: repeat(4, 100px);
+  grid-template-rows: minmax(125px, auto) repeat(5, 90px);
+}
+
+  .grid > button {
+      font-family: 'Impact', arial;
+      font-size: 3rem;
+      border: 2px solid gray;
+      outline: none;
+      background-color: rgba(255, 255, 255, .75);
+      border-radius: 4px;
+  }
+
+  .button-span {
+  grid-column: span 2;
+}
+
+#display {
+  grid-column: 1 / -1;
+  background-color: rgba(0, 0, 0, 1);
+  display: grid;
+  border: 4px solid gray;
+  align-items: flex-end;
+  justify-content: right;
+  flex-direction: column;
+  padding: 10px;
+  word-wrap: break-word;
+  word-break: break-all;
+  border-radius: 4px;
+}
+
+  input[type="text"] {
+    font-family: 'Impact', arial;
+    font-weight: normal;
+    font-size: 4rem;
+    color: rgba(255, 255, 255, 1);
+  }
