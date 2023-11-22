@@ -26,10 +26,7 @@ class Calculator {
   // calculates user input
   calculateResult() {
     try {
-      /* Intitally used 'this.result = eval(this.currentInput);' then was advised to use a function constructor.
-       Use Function constructor to evaluate expressions safely. */
-      const calculate = new Function('return ' + this.currentInput);
-      this.result = calculate();
+      this.result = eval(this.currentInput);
     } catch (error) {
       this.result = 'Error';
     }
